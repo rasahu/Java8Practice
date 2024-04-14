@@ -1,4 +1,4 @@
-package com.rake.other;
+package com.rake.important.concept;
 
 /**
  * 1. Ensure that only one instance of the class exists. 2. Provide global
