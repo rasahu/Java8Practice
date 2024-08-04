@@ -1,5 +1,6 @@
 package com.rake.stream.example;
 
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**This program uses the IntStream.range() method to generate a stream of integers from 0 to half the length of the string. 
@@ -11,13 +12,14 @@ import java.util.stream.IntStream;
 public class Palindrome {
     public static boolean isPalindrome(String str) {
         return IntStream.range(0, str.length() / 2)
-                .allMatch(i -> str.charAt(i) == str.charAt(str.length() - 1 - i));
+                .allMatch(i -> str.charAt(i) == str.charAt((str.length()-1) - i));
     }
 
     public static void main(String[] args) {
         String str = "racecar";
         System.out.println(isPalindrome(str)); // true
-
+        
+        System.out.println(IntStream.range(0, str.length() / 2).toArray().length);;
         str = "madam";
         System.out.println(isPalindrome(str)); // true
 

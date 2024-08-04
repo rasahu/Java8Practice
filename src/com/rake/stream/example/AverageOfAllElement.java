@@ -9,6 +9,7 @@ public class AverageOfAllElement {
 		
 		Double averageValue= intList.stream().mapToInt(a->a).average().getAsDouble();
 		System.out.println("average value is : " +averageValue);
+
 	}
 
 }
