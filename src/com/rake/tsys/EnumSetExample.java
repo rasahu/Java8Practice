@@ -4,7 +4,7 @@ package com.rake.tsys;
 
 import java.util.EnumSet;
 
-public class EnumExample {
+public class EnumSetExample {
 
     enum Days {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
