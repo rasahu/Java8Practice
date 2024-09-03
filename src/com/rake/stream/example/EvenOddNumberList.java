@@ -10,7 +10,7 @@ public class EvenOddNumberList {
 		//print even number list with unique value
 		intList.stream().filter(e->e%2==0).distinct().toList().forEach(System.out::println);
 		System.out.println("Odd Number :: ");
-		intList.stream().filter(e->e%2!=0).distinct().toList().forEach(System.out::println);
+		intList.stream().parallel().filter(e->e%2!=0).distinct().toList().forEach(System.out::println);
 		
 	}
 

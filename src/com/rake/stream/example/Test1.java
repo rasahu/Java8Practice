@@ -1,11 +1,12 @@
 package com.rake.stream.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
-public class Test1 {
+public class Test1 extends Thread {
     /*
      * public static void main(String[] args) {
      *
@@ -26,8 +27,7 @@ public class Test1 {
     }
 
     public static void main(String[] args) {
-        String maskingtest = "sahu.rakesh.28345@gmail.com";
-        maskingtest = maskingtest.replaceAll(".(?=.{4})", "X");
-        System.out.println(maskingtest);
+        
+        
     }
 }
