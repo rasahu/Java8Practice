@@ -21,9 +21,8 @@ public class Test1 extends Thread {
      */
 
     public static boolean isPalindrome(String args) {
-
-        return IntStream.range(0, args.length()).allMatch(i -> args.charAt(i) == args.charAt(args.length() - i + 1));
-
+        return IntStream.range(0, args.length()).allMatch(i -> args.charAt(i) == 
+        		               args.charAt(args.length() - i + 1));
     }
 
     public static void main(String[] args) {
