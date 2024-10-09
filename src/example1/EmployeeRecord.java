@@ -1,22 +1,35 @@
 package example1;
 
+import java.util.Objects;
 
 public class EmployeeRecord {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private int salary;
-    private int age;
-    
-    
-	public EmployeeRecord(int id, String firstName, String lastName, int salary, int age) {
+    public EmployeeRecord(int id, String firstName) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
-		this.lastName = lastName;
-		this.salary = salary;
-		this.age = age;
 	}
+	@Override
+	public String toString() {
+		return "EmployeeRecord [id=" + id + ", firstName=" + firstName + "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(firstName, id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EmployeeRecord other = (EmployeeRecord) obj;
+		return Objects.equals(firstName, other.firstName) && id == other.id;
+	}
+	private int id;
+    private String firstName;
+    
 	public int getId() {
 		return id;
 	}
@@ -29,23 +42,5 @@ public class EmployeeRecord {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public int getSalary() {
-		return salary;
-	}
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-    
+
 }
